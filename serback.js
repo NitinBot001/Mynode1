@@ -26,7 +26,7 @@ app.post('/signup', (req, res) => {
   const worksheet = XLSX.utils.aoa_to_sheet(userData);
   XLSX.utils.book_append_sheet(workbook, worksheet, 'Signup Data');
 
-  XLSX.writeFile(workbook, 'signup_data.xlsx');
+  XLSX.writeFile(workbook, 'userdata.xlsx');
 
   // Respond to successful signup (potentially redirect to login page)
   res.send('Signup successful! You can now log in.');
